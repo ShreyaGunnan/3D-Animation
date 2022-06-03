@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer bounds="tight" enable-pan src="Police car.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1" auto-rotate camera-orbit="8.52deg 83.13deg auto">
+      <button class="Hotspot" slot="hotspot-1" data-position="-19.07508067623604m 7.860735262109628m 27.443045120808776m" data-normal="-0.9998211884434375m -0.009455047798647878m -0.016376605590829343m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Front Wheel 1</div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="-19.071978235592184m 8.343351272218996m -33.185293462714085m" data-normal="-0.9992706557123482m -0.03818581716048279m 0m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Rear Wheel 1</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="19.07416657814247m 8.38751892939753m 29.255850946427493m" data-normal="0.9997807277589921m -0.01889103617800128m -0.009034664012672222m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Front Wheel 2</div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="19.069221427139095m 8.655240716225721m -33.769310834535695m" data-normal="0.9992706507716929m 0.03818594645046183m -5.551115123125783e-17m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Rear Wheel 2</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
